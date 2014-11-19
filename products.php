@@ -1,11 +1,11 @@
 <?php 
 
 $page = "products";
+include("inc/store-products.php");
 $pageTitle = "Products";
 include('inc/header.php'); 
 
 ?>
-
 
 <div class="container">
 
@@ -75,10 +75,14 @@ include('inc/header.php');
     <div class="col-md-9 text-center">
       <h3>Products</h3>
       <hr>
-      <div class="row">
-      <?php include("inc/store-products.php"); ?>
+      <!-- <div class="row"> -->
       <?php 
-      foreach($products as $product) { ?>
+        $count = 1;
+        shuffle($products);
+        foreach($products as $product) { 
+            if($count==0 OR is_int($count/3)) {
+            echo '<div class="row">';
+        } ?>
 
       <!-- ===== Start of Product ====== -->
         <div class="col-md-4 product-item">
@@ -126,56 +130,18 @@ include('inc/header.php');
             </div>
           </div>
         </div>
+
       <!-- ===== End of Product ====== -->
-      <?php } ?>
+      <?php 
+        if($count==0 OR is_int($count/3)){
+            echo '</div>';
+        }
+        $count++;
+
+      } ?>
 
 
-<!--  
-
-        </div>
-
-
-        <div class="col-md-4 product-item">
-          <a href="#" data-toggle="modal" data-target="#wheatgrass"><img src="img/products/wheatgrass_front_500g_3D.png" alt="chia_front_500g_3D"></a>
-          <h4>Wheatgrass</h4>
-          <h4 class="price">£12.00</h4>
-          <button class="btn btn-default" data-toggle="modal" data-target="#wheatgrass">view</button>
-        </div>
-
-        
-        <div class="modal fade" id="wheatgrass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Wheatgrass</h4>
-              </div>
-
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6"><img src="img/products/wheatgrass_front_500g_3D.png" alt="chia_front_500g_3D"></div>
-                  <div class="col-md-6 text-left">
-                    <h4>Wheatgrass</h4>
-                    <h4 class="price">£12.00</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                    </p>
-                    <h5 class="supplment-facts">Supplment Facts</h5>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-default"><a href="http://www.amazon.com/">Buy Now</a></button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-
-      </div>
+      <!-- </div> --> <!-- end row -->
 
     </div>
   </div>

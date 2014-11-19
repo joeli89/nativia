@@ -9,6 +9,8 @@ $grams500 = "500g";
 
 $products = array();
 
+/*======== SUPERFOODS ==========*/
+
 	$products[] = array(
 		"image" => "img/products/chia_front_500g_3D.png",
 		"target" => "chiaSeeds_250",
@@ -69,9 +71,31 @@ $products = array();
 		"facts" => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
 		"link" => "http://www.amazon.co.uk/gp/product/B00NP5G9NO"
 	);
+	
+	/*Certified organic Coconut Oil*/
+	$products[] = array(
+		"image" => "img/products/no-image.png",
+		"target" => "coconut_oil_250",
+		"description" => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+		"title" => "Certified organic Coconut Oil",
+		"price" => 0.00,
+		"quantity" =>  $grams250,
+		"facts" => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+		"link" => "http://www.amazon.co.uk/gp/product/B00NXJZ4QK"
+	);
+	$products[] = array(
+		"image" => "img/products/no-image.png",
+		"target" => "coconut_oil_500",
+		"description" => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+		"title" => "Certified organic Coconut Oil",
+		"price" => 0.00,
+		"quantity" =>  $grams500,
+		"facts" => "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+		"link" => "http://www.amazon.co.uk/gp/product/B00NXJZ4LU"
+	);
 
 
-
+/*======== Supplements  ==========*/
 	$products[] = array(
 		"image" => "img/products/no-image.png",
 		"target" => "multivitamins60",
